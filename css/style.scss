@@ -1,0 +1,174 @@
+$bg-color:linear-gradient(#F3B9F3 90%, #FFE8FF);
+$bg-color2:linear-gradient(#FFE8FF 90%,#F3B9F3 );
+$bg-color-navbar: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+$font-color: black;
+@mixin sections-Attributes($Color) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: $Color;
+}
+@mixin h1-Attributes($color) {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $color;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+@mixin p-attributes($color) {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color;    
+}
+
+body {
+    display: block;
+    overflow-x: hidden;
+ 
+}
+/* Nav Bar*/
+nav {
+    background: $bg-color-navbar;
+    
+}
+.navbar-brand img{
+    max-height: 30px;
+    vertical-align: top;
+    
+}
+.navbar-brand {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $font-color;
+   
+}
+nav ul li a {
+    color: $font-color;
+    font-size: 22px;
+    margin: auto 10px;
+    font-weight: 600;
+}
+nav ul li a:hover {
+    color: #683aa4;
+}
+/*end Nav Bar*/
+
+/*introduction*/
+#intro {
+   @include sections-Attributes($bg-color);
+
+}
+
+#h1-intro {
+    @include h1-Attributes($font-color);
+    margin-top: 0px;
+    margin-bottom: 0px
+}
+#text-intro {
+    @include p-attributes($font-color);
+    margin-top: 10px;
+}
+
+#intro .col {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+#intro .img-col {
+    justify-content: flex-end;
+    margin-top: 100px;
+}
+#intro img {
+    max-width: 100% !important;
+}
+/*introduction end*/
+
+/*About me*/
+
+#about-me{
+    @include sections-Attributes($bg-color2);
+}
+#about-H1{
+    @include h1-Attributes($font-color);
+}
+#about-text {
+    @include p-attributes($font-color);
+}
+.image-container {
+  
+   display: flex;
+}
+.all-incons {
+    display: flex;
+    flex-flow:row wrap;
+}
+.incon {
+    height: 80px;
+    margin-right: 60px;
+  
+}
+/*About me end*/
+
+/*projects*/
+.carousel-indicators button {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    background-color: #43e97b !important;
+    
+}
+.carousel-size{
+    max-width: 100%;
+}
+
+
+#projects{
+    @include sections-Attributes($bg-color);
+}
+.projects {
+    margin-bottom: 50px;
+  }
+.project-h1{
+    @include h1-Attributes($font-color);
+}
+.project-txt {
+    @include p-attributes($font-color);
+}
+.project-button{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.color-button1{
+    font-weight: 700;
+    padding: 10px 30px;
+    margin-right: 50px;
+    background-color:#43E97B;
+    border-color: #43E97B;
+    color: black;
+    box-shadow: 7px 7px 10px #3FEF9E;
+}
+.color-button2{
+    font-weight: 700;
+    padding: 10px 30px;
+    background-color:#F3B9F3;
+    border-color: #F3B9F3;
+    color: black;
+    box-shadow: 7px 7px 10px #FAD3FA;
+}
+/*contact*/
+#contact {
+    @include sections-Attributes($bg-color2)
+}
+/*contact end*/
+button {
+    max-width: 20%;
+    border-radius: 50px !important;
+    
+}
+
+
+
+
