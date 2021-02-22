@@ -1,7 +1,7 @@
-$bg-color:white;
-$bg-color2: #FFE8FF;
 $bg-color-navbar: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
-$font-color: black;
+$bg-color:#D0E0D3;
+$bg-color2: #75B9A0;
+$font-color: #226651;
 @mixin sections-Attributes($Color) {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -18,7 +18,7 @@ $font-color: black;
 }
 @mixin p-attributes($color) {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 900;
     color: $color;    
 }
 
@@ -51,7 +51,7 @@ nav ul li a {
     font-weight: 600;
 }
 nav ul li a:hover {
-    color: #683aa4;
+    color:white;
 }
 /*end Nav Bar*/
 
@@ -142,33 +142,35 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 .color-button1{
+    max-width: 20%;
+    border-radius: 50px !important;
     font-weight: 700;
-    padding: 10px 30px;
+    padding: 10px 20px;
     margin-right: 50px;
-    background-color:#43E97B;
+    background-color:#75B9A0;
     border-color: #43E97B;
-    color: black;
-    box-shadow: 7px 7px 10px #3FEF9E;
+    color: WHITE;
+    box-shadow: 7px 7px 10px#226651;
+}
+button:hover{
+    background-color: #226651 !important;
 }
 .color-button2{
+    max-width: 20%;
+    border-radius: 50px !important;
     font-weight: 700;
-    padding: 10px 30px;
-    background-color:#F3B9F3;
-    border-color: #F3B9F3;
-    color: black;
-    box-shadow: 7px 7px 10px #FAD3FA;
+    padding: 10px 20px;
+    margin-right: 50px;
+    background-color: #43e97b;
+    border-color:#75B9A0;
+    color: WHITE;
+    box-shadow: 7px 7px 10px #226651;
 }
 /*contact*/
 #contact {
     @include sections-Attributes($bg-color2)
 }
 /*contact end*/
-button {
-    max-width: 20%;
-    border-radius: 50px !important;
-    
-}
-
 
 
 
