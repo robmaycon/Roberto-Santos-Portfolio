@@ -21,11 +21,36 @@ $font-color: #226651;
     font-weight: 900;
     color: $color;    
 }
+@mixin button-color1 {
+    background-color:#75B9A0;
+    border-color: #43E97B;
+    color: WHITE;
+    box-shadow: 7px 7px 10px#226651;
+    
+}
+@mixin button-color2 {
+    background-color: #43e97b;
+    border-color:#75B9A0;
+    color: WHITE;
+    box-shadow: 7px 7px 10px #226651;
+    
+}
+@mixin button-attributes {
+    max-width: 20%;
+    border-radius: 50px !important;
+    font-weight: 700;
+    padding: 10px 20px 10px 20px;
+    margin-right: 50px;
+    
+}
 
 body {
     display: block;
     overflow-x: hidden;
  
+}
+button:hover, button:active, button:focus{
+    background-color: #226651 !important;
 }
 /* Nav Bar*/
 nav {
@@ -58,6 +83,7 @@ nav ul li a:hover {
 /*introduction*/
 #intro {
    @include sections-Attributes($bg-color);
+   
 
 }
 
@@ -70,7 +96,14 @@ nav ul li a:hover {
     @include p-attributes($font-color);
     margin-top: 10px;
 }
-
+.intro-button1 {
+    @include button-attributes;
+    @include button-color1;
+}
+.intro-button2 {
+    @include button-attributes;
+    @include button-color2;
+}
 #intro .col {
     justify-content: center;
     flex-direction: column;
@@ -95,6 +128,10 @@ nav ul li a:hover {
 }
 #about-text {
     @include p-attributes($font-color);
+}
+.about-button {
+    @include button-attributes;
+    @include button-color2;
 }
 .image-container {
   
@@ -126,6 +163,7 @@ nav ul li a:hover {
 
 #projects{
     @include sections-Attributes($bg-color);
+    box-sizing: content-box;
 }
 .projects {
     margin-bottom: 50px;
@@ -142,35 +180,93 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 .color-button1{
-    max-width: 20%;
-    border-radius: 50px !important;
-    font-weight: 700;
-    padding: 10px 20px 10px 20px;
-    margin-right: 50px;
-    background-color:#75B9A0;
-    border-color: #43E97B;
-    color: WHITE;
-    box-shadow: 7px 7px 10px#226651;
-}
-button:hover{
-    background-color: #226651 !important;
+    @include button-attributes;
+    @include button-color1;
 }
 .color-button2{
-    max-width: 20%;
-    border-radius: 50px !important;
-    font-weight: 700;
-    padding: 10px 20px 10px 20px;
-    margin-right: 50px;
-    background-color: #43e97b;
-    border-color:#75B9A0;
-    color: WHITE;
-    box-shadow: 7px 7px 10px #226651;
+   @include button-attributes;
+   @include button-color2;
 }
+/*Projects end*/
+
 /*contact*/
 #contact {
     @include sections-Attributes($bg-color2)
 }
 /*contact end*/
+
+@media (max-width: 1399.98px) {
+    .color-button1, .color-button2 {
+        max-width: 30%;
+        margin-bottom: 30px;
+    }
+
+}
+
+@media (max-width: 1199.98px) {
+    .align-items-center {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .intro-button1{
+        max-width: 30%;
+    }
+    .intro-button2 {
+        max-width: 30%;
+    }
+    .align-items-center {
+        display: flex;
+        flex-direction: column;
+    }
+
+};
+@media (max-width: 767.98px) {
+    .container{
+        max-width: 100%;
+    };
+   .d-grid {
+       display: inline !important;
+   }
+   .align-items-center {
+       display: flex;
+       flex-direction: column;
+   }
+  
+}
+@media (max-width: 689.98px){
+    /* Intro*/
+    .row {
+        display: inline;
+    }
+    #intro .col {
+        align-items: initial;
+    }
+    
+    .img-col{
+        margin-top: 5% !important;
+    }
+    /* Intro end*/
+    .incon {
+        height: 56px;
+        margin-right: 7px;
+    }
+    .about-button {
+        max-width: 30%;
+    }
+    .project-button {
+        flex-direction: column;
+        align-items: center;
+    }
+    .color-button1, .color-button2 {
+        max-width: 40%;
+        margin-right: none;
+        margin-bottom: 30px;
+    }
+
+}
 
 
 
