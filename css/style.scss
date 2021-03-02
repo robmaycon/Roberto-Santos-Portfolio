@@ -1,6 +1,6 @@
-$bg-color-navbar: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+$bg-color-navbar:rgb(67, 233, 123,.8);
 $bg-color:#D0E0D3;
-$bg-color2: #75B9A0;
+$bg-color2: #FFFFFF;
 $font-color: #226651;
 @mixin sections-Attributes($Color) {
     padding-top: 50px;
@@ -18,25 +18,39 @@ $font-color: #226651;
 }
 @mixin p-attributes($color) {
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 800;
     color: $color;    
 }
 @mixin button-color1 {
-    background-color:#75B9A0;
-    border-color: #43E97B;
+    background-color:#64B5F6;
+    border-color: #42A5F6;
     color: WHITE;
-    box-shadow: 7px 7px 10px#226651;
+    box-shadow: 0px 5px 10px #42A5F6;
     
 }
 @mixin button-color2 {
-    background-color: #43e97b;
-    border-color:#75B9A0;
+    background-color: #EC407A;
+    border-color:#EA1E63;
     color: WHITE;
-    box-shadow: 7px 7px 10px #226651;
+    box-shadow: 0px 5px 10px #D81A60;
     
 }
+@mixin button-hover1 {
+    &:hover, &:active, &:focus {
+        background-color: #42A5F6 !important;
+        border-color: #42A5f6 !important;
+        box-shadow: 0px 10px 10px #42A5F6;
+    };
+}
+@mixin button-hover2 {
+    &:hover, &:active, &:focus {
+        background-color: #EA1E63 !important;
+        border-color: #EC407A !important;
+        box-shadow: 0px 10px 10px #D81A60;
+    };
+}
 @mixin button-attributes {
-    max-width: 20%;
+    max-width: 100%;
     border-radius: 50px !important;
     font-weight: 700;
     padding: 10px 20px 10px 20px;
@@ -49,25 +63,21 @@ body {
     overflow-x: hidden;
  
 }
-button:hover, button:active, button:focus{
-    background-color: #226651 !important;
-}
+
 /* Nav Bar*/
 nav {
     background: $bg-color-navbar;
-    
 }
+
 .navbar-brand img{
-    max-height: 30px;
-    vertical-align: top;
-    
+    max-height: 40px;
+    vertical-align: bottom;
 }
 .navbar-brand {
     font-size: 24px;
     text-transform: uppercase;
     font-weight: 900;
     color: $font-color;
-   
 }
 nav ul li a {
     color: $font-color;
@@ -83,8 +93,6 @@ nav ul li a:hover {
 /*introduction*/
 #intro {
    @include sections-Attributes($bg-color);
-   
-
 }
 
 #h1-intro {
@@ -99,19 +107,21 @@ nav ul li a:hover {
 .intro-button1 {
     @include button-attributes;
     @include button-color1;
-}
+    @include button-hover1;
+};
 .intro-button2 {
     @include button-attributes;
     @include button-color2;
-}
+    @include button-hover2;
+};
 #intro .col {
     justify-content: center;
     flex-direction: column;
     display: flex;
+    margin-top: 5%;
 }
 #intro .img-col {
     justify-content: flex-end;
-    margin-top: 100px;
 }
 #intro img {
     max-width: 100% !important;
@@ -125,6 +135,7 @@ nav ul li a:hover {
 }
 #about-H1{
     @include h1-Attributes($font-color);
+    margin-top:1px;
 }
 #about-text {
     @include p-attributes($font-color);
@@ -132,9 +143,9 @@ nav ul li a:hover {
 .about-button {
     @include button-attributes;
     @include button-color2;
+    @include button-hover2;
 }
 .image-container {
-  
    display: flex;
 }
 .all-incons {
@@ -144,7 +155,6 @@ nav ul li a:hover {
 .incon {
     height: 80px;
     margin-right: 60px;
-  
 }
 /*About me end*/
 
@@ -154,13 +164,10 @@ nav ul li a:hover {
     height: 20px !important;
     border-radius: 50% !important;
     background-color: #43e97b !important;
-    
 }
 .carousel-size{
     max-width: 100%;
 }
-
-
 #projects{
     @include sections-Attributes($bg-color);
     box-sizing: content-box;
@@ -182,45 +189,70 @@ nav ul li a:hover {
 .color-button1{
     @include button-attributes;
     @include button-color1;
+    @include button-hover1;
 }
 .color-button2{
    @include button-attributes;
    @include button-color2;
+   @include button-hover2;
 }
 /*Projects end*/
 
 /*contact*/
 #contact {
-    @include sections-Attributes($bg-color2)
+    @include sections-Attributes(#43e97b);
 }
+.contact-h1 {
+    @include h1-Attributes ($font-color);
+    margin-top: 0px;
+}
+.contact-txt {
+    @include p-attributes(#0b87ec);
+}
+.bi {
+    width: 10%;
+    text-align: center;
+    margin: 5px 10px;
+    color: #EC407A;
+    &:hover, &:active, &:focus{
+        color:#0b87ec;
+    };
+};
 /*contact end*/
+
+/* Responsive*/
 
 @media (max-width: 1399.98px) {
     .color-button1, .color-button2 {
-        max-width: 30%;
+        max-width: 100%;
         margin-bottom: 30px;
-    }
-
-}
+    };
+};
 
 @media (max-width: 1199.98px) {
     .align-items-center {
         display: flex;
         flex-direction: column;
     }
+    .aboutme-img {
+        max-width: 38%;
+    }
 }
 
 @media (max-width: 991.98px) {
     .intro-button1{
-        max-width: 30%;
+        max-width: 100%;
     }
     .intro-button2 {
-        max-width: 30%;
+        max-width: 100%;
     }
     .align-items-center {
         display: flex;
         flex-direction: column;
     }
+   .aboutme-position {
+       display: inline;
+   }
 
 };
 @media (max-width: 767.98px) {
@@ -233,9 +265,9 @@ nav ul li a:hover {
    .align-items-center {
        display: flex;
        flex-direction: column;
-   }
+   };
   
-}
+};
 @media (max-width: 689.98px){
     /* Intro*/
     .row {
@@ -243,6 +275,10 @@ nav ul li a:hover {
     }
     #intro .col {
         align-items: initial;
+        margin-top: 15%;
+    }
+    .d-grid {
+        display: flex !important;
     }
     
     .img-col{
@@ -254,19 +290,19 @@ nav ul li a:hover {
         margin-right: 7px;
     }
     .about-button {
-        max-width: 30%;
+        max-width: 100%;
     }
     .project-button {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
     .color-button1, .color-button2 {
-        max-width: 40%;
-        margin-right: none;
+        max-width: 100%;
+        margin-right: 10px;
         margin-bottom: 30px;
-    }
+    };
 
-}
+};
 
 
 

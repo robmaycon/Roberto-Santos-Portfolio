@@ -3,18 +3,14 @@ body {
   overflow-x: hidden;
 }
 
-button:hover, button:active, button:focus {
-  background-color: #226651 !important;
-}
-
 /* Nav Bar*/
 nav {
-  background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  background: rgba(67, 233, 123, 0.8);
 }
 
 .navbar-brand img {
-  max-height: 30px;
-  vertical-align: top;
+  max-height: 40px;
+  vertical-align: bottom;
 }
 
 .navbar-brand {
@@ -56,44 +52,54 @@ nav ul li a:hover {
 
 #text-intro {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   color: #226651;
   margin-top: 10px;
 }
 
 .intro-button1 {
-  max-width: 20%;
+  max-width: 100%;
   border-radius: 50px !important;
   font-weight: 700;
   padding: 10px 20px 10px 20px;
   margin-right: 50px;
-  background-color: #75B9A0;
-  border-color: #43E97B;
+  background-color: #64B5F6;
+  border-color: #42A5F6;
   color: WHITE;
-  box-shadow: 7px 7px 10px #226651;
+  box-shadow: 0px 5px 10px #42A5F6;
+}
+.intro-button1:hover, .intro-button1:active, .intro-button1:focus {
+  background-color: #42A5F6 !important;
+  border-color: #42A5f6 !important;
+  box-shadow: 0px 10px 10px #42A5F6;
 }
 
 .intro-button2 {
-  max-width: 20%;
+  max-width: 100%;
   border-radius: 50px !important;
   font-weight: 700;
   padding: 10px 20px 10px 20px;
   margin-right: 50px;
-  background-color: #43e97b;
-  border-color: #75B9A0;
+  background-color: #EC407A;
+  border-color: #EA1E63;
   color: WHITE;
-  box-shadow: 7px 7px 10px #226651;
+  box-shadow: 0px 5px 10px #D81A60;
+}
+.intro-button2:hover, .intro-button2:active, .intro-button2:focus {
+  background-color: #EA1E63 !important;
+  border-color: #EC407A !important;
+  box-shadow: 0px 10px 10px #D81A60;
 }
 
 #intro .col {
   justify-content: center;
   flex-direction: column;
   display: flex;
+  margin-top: 5%;
 }
 
 #intro .img-col {
   justify-content: flex-end;
-  margin-top: 100px;
 }
 
 #intro img {
@@ -105,7 +111,7 @@ nav ul li a:hover {
 #about-me {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: #75B9A0;
+  background: #FFFFFF;
 }
 
 #about-H1 {
@@ -115,24 +121,30 @@ nav ul li a:hover {
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
+  margin-top: 1px;
 }
 
 #about-text {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   color: #226651;
 }
 
 .about-button {
-  max-width: 20%;
+  max-width: 100%;
   border-radius: 50px !important;
   font-weight: 700;
   padding: 10px 20px 10px 20px;
   margin-right: 50px;
-  background-color: #43e97b;
-  border-color: #75B9A0;
+  background-color: #EC407A;
+  border-color: #EA1E63;
   color: WHITE;
-  box-shadow: 7px 7px 10px #226651;
+  box-shadow: 0px 5px 10px #D81A60;
+}
+.about-button:hover, .about-button:active, .about-button:focus {
+  background-color: #EA1E63 !important;
+  border-color: #EC407A !important;
+  box-shadow: 0px 10px 10px #D81A60;
 }
 
 .image-container {
@@ -184,7 +196,7 @@ nav ul li a:hover {
 
 .project-txt {
   font-size: 16px;
-  font-weight: 900;
+  font-weight: 800;
   color: #226651;
 }
 
@@ -195,27 +207,37 @@ nav ul li a:hover {
 }
 
 .color-button1 {
-  max-width: 20%;
+  max-width: 100%;
   border-radius: 50px !important;
   font-weight: 700;
   padding: 10px 20px 10px 20px;
   margin-right: 50px;
-  background-color: #75B9A0;
-  border-color: #43E97B;
+  background-color: #64B5F6;
+  border-color: #42A5F6;
   color: WHITE;
-  box-shadow: 7px 7px 10px #226651;
+  box-shadow: 0px 5px 10px #42A5F6;
+}
+.color-button1:hover, .color-button1:active, .color-button1:focus {
+  background-color: #42A5F6 !important;
+  border-color: #42A5f6 !important;
+  box-shadow: 0px 10px 10px #42A5F6;
 }
 
 .color-button2 {
-  max-width: 20%;
+  max-width: 100%;
   border-radius: 50px !important;
   font-weight: 700;
   padding: 10px 20px 10px 20px;
   margin-right: 50px;
-  background-color: #43e97b;
-  border-color: #75B9A0;
+  background-color: #EC407A;
+  border-color: #EA1E63;
   color: WHITE;
-  box-shadow: 7px 7px 10px #226651;
+  box-shadow: 0px 5px 10px #D81A60;
+}
+.color-button2:hover, .color-button2:active, .color-button2:focus {
+  background-color: #EA1E63 !important;
+  border-color: #EC407A !important;
+  box-shadow: 0px 10px 10px #D81A60;
 }
 
 /*Projects end*/
@@ -223,13 +245,40 @@ nav ul li a:hover {
 #contact {
   padding-top: 50px;
   padding-bottom: 50px;
-  background: #75B9A0;
+  background: #43e97b;
+}
+
+.contact-h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #226651;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.contact-txt {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0b87ec;
+}
+
+.bi {
+  width: 10%;
+  text-align: center;
+  margin: 5px 10px;
+  color: #EC407A;
+}
+.bi:hover, .bi:active, .bi:focus {
+  color: #0b87ec;
 }
 
 /*contact end*/
+/* Responsive*/
 @media (max-width: 1399.98px) {
   .color-button1, .color-button2 {
-    max-width: 30%;
+    max-width: 100%;
     margin-bottom: 30px;
   }
 }
@@ -238,19 +287,27 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
   }
+
+  .aboutme-img {
+    max-width: 38%;
+  }
 }
 @media (max-width: 991.98px) {
   .intro-button1 {
-    max-width: 30%;
+    max-width: 100%;
   }
 
   .intro-button2 {
-    max-width: 30%;
+    max-width: 100%;
   }
 
   .align-items-center {
     display: flex;
     flex-direction: column;
+  }
+
+  .aboutme-position {
+    display: inline;
   }
 }
 @media (max-width: 767.98px) {
@@ -275,6 +332,11 @@ nav ul li a:hover {
 
   #intro .col {
     align-items: initial;
+    margin-top: 15%;
+  }
+
+  .d-grid {
+    display: flex !important;
   }
 
   .img-col {
@@ -288,17 +350,17 @@ nav ul li a:hover {
   }
 
   .about-button {
-    max-width: 30%;
+    max-width: 100%;
   }
 
   .project-button {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
   .color-button1, .color-button2 {
-    max-width: 40%;
-    margin-right: none;
+    max-width: 100%;
+    margin-right: 10px;
     margin-bottom: 30px;
   }
 }
